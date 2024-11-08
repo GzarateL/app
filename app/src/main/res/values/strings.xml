@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NaveApp</string>
+    <string name="default_web_client_id">762412587832-vmqhu9g1vt9is5r23pevhcsli6r71aks.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">965578032264392</string>
+    <string name="facebook_client_token">86a10cfb015956a30d6f45f95eb024f1</string>
+</resources>

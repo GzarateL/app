@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DashboardActivity">
+
+    <!-- TextView para mostrar la hora actual -->
+    <TextView
+        android:id="@+id/textViewGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="HORA ACTUAL"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagen del logo del coche -->
+
+    <!-- Contenedor de botones -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/car_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="429dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGreeting">
+
+        <!-- Botón Activar Alarma (circular) -->
+        <Button
+            android:id="@+id/buttonCallPolice"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_circle_green"
+            android:gravity="center"
+            android:text="LLAMAR POLICÍA"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonActivateAlarm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_circle_yellow"
+            android:text="ACTIVAR ALARMA"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Botón Desactivar Motor (circular) -->
+        <Button
+            android:id="@+id/buttonDeactivateMotor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_circle_red"
+            android:text="DESACTIVAR MOTOR"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Sección de cámaras -->
+    <TextView
+        android:id="@+id/textViewCameras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="CAMARAS"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonContainer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCameras">
+
+        <!-- Botón de la cámara de día -->
+        <ImageButton
+            android:id="@+id/buttonDayCamera"
+            android:layout_width="178dp"
+            android:layout_height="145dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_rounded_white"
+            android:clickable="true"
+            android:contentDescription="Botón Cámara de Día"
+            android:focusable="true"
+            android:padding="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_sun" />
+
+        <!-- Botón de la cámara de noche -->
+        <ImageButton
+            android:id="@+id/buttonNightCamera"
+            android:layout_width="178dp"
+            android:layout_height="145dp"
+            android:background="@drawable/button_rounded_black"
+            android:clickable="true"
+            android:contentDescription="Botón Cámara de Noche"
+            android:focusable="true"
+            android:padding="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_moon" />
+    </LinearLayout>
+
+    <!-- Sección de auto conectado -->
+    <TextView
+        android:id="@+id/textViewConnectedCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="172dp"
+        android:text="AUTO CONECTADO"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCameras" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/imageViewCarConnected"
+        app:layout_constraintTop_toBottomOf="@id/textViewConnectedCar">
+
+        <TextView
+            android:id="@+id/textViewCarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APODO DEL CARRO:"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCarNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAYITO"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCarPlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLACA: ABC-1A2"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewCarConnected"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/car_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConnectedCar"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewSettings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:id="@+id/textViewSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AJUSTES"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/textViewProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERFIL"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

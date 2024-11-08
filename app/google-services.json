@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "762412587832",
+    "project_id": "navepe-d86dc",
+    "storage_bucket": "navepe-d86dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762412587832:android:3a7589be7902a934b7ffcd",
+        "android_client_info": {
+          "package_name": "com.weissoft.naveapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762412587832-vmqhu9g1vt9is5r23pevhcsli6r71aks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2yMON0HkloftcT05m2MIVPuqqtQLxWj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762412587832-vmqhu9g1vt9is5r23pevhcsli6r71aks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
